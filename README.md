@@ -6,7 +6,7 @@ Basic Setup with Server / ssl
 INSTALL NGINX SSL / AUTO RENEWAL
 
 
-Sudo apt install nginx
+#Sudo apt install nginx
 Sudo apt update
 Sudo ufw app list
 Sudo ufw allow ’Nginx http’
