@@ -2,8 +2,8 @@
 Basic Setup with Server / ssl
 
 
-
-INSTALL NGINX SSL / AUTO RENEWAL
+```
+##INSTALL NGINX SSL / AUTO RENEWAL
 
 
 #Sudo apt install nginx
@@ -32,10 +32,11 @@ ln -s /snap/bin/certbot /usr/bin/certbot
 certbot --nginx 
 Installs a certificate for domain example.com
 
-After that below steps we are going to use wildcard 
+##After that below steps we are going to use wildcard 
 
 
 certbot --server https://acme-v02.api.letsencrypt.org/directory -d *.anglo-indiancuisine.com -d anglo-indiancuisine.com --manual --preferred-challenges dns-01 certonly
+
 certbot certificates
 sudo nano /etc/nginx/sites-enabled/raven_hacks
 certbot renew
@@ -63,6 +64,7 @@ server_name anglo-indiancuisine.com *.anglo-indiancuisine.com;
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certb>
 
 }
+
 server {
         listen 80;
         server_name anglo-indiancuisine.com *.anglo-indiancuisine.com;
@@ -71,6 +73,6 @@ server {
 }
 
 
-
+```
 
 
